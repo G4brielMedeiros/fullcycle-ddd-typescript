@@ -33,7 +33,7 @@ describe("Customer EventHandler Tests", () => {
     logSpy.mockRestore();
   });
 
-  it("should log (first time) details from the CustomerChangeAddressEvent when its notified", () => {
+  it("should log (first time) details from the CustomerCreatedEvent when its notified", () => {
     const eventDispatcher = new EventDispatcher();
     const eventHandler = new EnviaConsoleLog1Handler();
 
@@ -56,7 +56,7 @@ describe("Customer EventHandler Tests", () => {
     logSpy.mockRestore();
   });
 
-  it("should log (second time) details from the CustomerChangeAddressEvent when its notified", () => {
+  it("should log (second time) details from the CustomerCreatedEvent when its notified", () => {
     const eventDispatcher = new EventDispatcher();
     const eventHandler = new EnviaConsoleLog2Handler();
 

@@ -5,7 +5,7 @@ import CustomerCreatedEvent from "../customer-created.event";
 export default class EnviaConsoleLogHandler
   implements EventHandlerInterface<CustomerChangedAddressEvent>
 {
-  handle(event: CustomerCreatedEvent): void {
+  handle(event: CustomerChangedAddressEvent): void {
     const eventData = event.eventData;
     console.log(`Endereço do cliente: ${eventData.id}, ${eventData.name} alterado para: ${eventData.address}`);
   }
